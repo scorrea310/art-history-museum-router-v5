@@ -10,10 +10,14 @@ const GalleryView = ({ galleries }) => {
         gallery.galleryid === +galleryId
     ))
 
-    console.log(specificGallery);
+    console.log(specificGallery.name);
 
     return (
-        <h1>Hello from Gallery View.</h1>
+        <>
+            <h1>Hello from Gallery View.</h1>
+            <h2>{specificGallery.name}</h2>
+        </>
+
     )
 }
 
