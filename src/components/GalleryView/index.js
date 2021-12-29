@@ -2,19 +2,29 @@ import { useParams, Route } from 'react-router-dom'
 import ArtImageTile from '../ArtImageTile'
 import ArtDescription from '../ArtDescription';
 
+/*
+GalleryView takes in props.galleries and we destrucure galleries on line 9.
+
+useParams() hooks lets us get galleryId from the url.
+
+*/
 const GalleryView = ({ galleries }) => {
-
-    // console.log("===", galleries)
-
     const { galleryId } = useParams();
 
+    /*
+    we get specificGallery from galleries using find where
+    gallery.galleryid === +galleryId
+    */
     const specificGallery = galleries.find(gallery => (
         gallery.galleryid === +galleryId
     ))
 
-    console.log("===", specificGallery.objects);
 
-    specificGallery.objects.map(art => (< ArtImageTile art={art} galleryId={galleryId} />))
+
+    /*
+    This GalleryView contains the gallery.
+    
+    */
 
     return (
         <>

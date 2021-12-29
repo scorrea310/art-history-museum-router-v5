@@ -4,6 +4,14 @@ import GalleryNavigation from './components/GalleryNavigation';
 import harvardArt from "./data/harvardArt"
 import { Route, Switch } from "react-router-dom"
 
+/*
+Route is almost like a route handler when the path is matched then we render
+a specfic view (single or set of components.)
+
+- <GalleryNavigation component is the set of navigation links.
+
+*/
+
 function App() {
 
   return (
